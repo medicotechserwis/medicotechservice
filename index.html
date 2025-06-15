@@ -2,83 +2,38 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MedicoTech Serwis</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f6;
-      margin: 0;
-      padding: 0;
-      color: #2c3e50;
-    }
-    header {
-      background-color: #003b46;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-    }
-    header img {
-      height: 60px;
-      margin-right: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #007c91;
-    }
-    footer {
-      background-color: #003b46;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="MedicoTech Serwis Logo">
     <h1>MedicoTech Serwis</h1>
+    <p>Profesjonalna naprawa urządzeń rehabilitacyjnych na terenie całej Polski</p>
   </header>
 
-  <main>
-    <section>
-      <h2>O nas</h2>
-      <p>Specjalizujemy się w naprawie, serwisie i diagnostyce sprzętu elektronicznego do rehabilitacji na terenie całej Polski. Naszym celem jest niezawodność, terminowość i bezpieczeństwo pacjentów.</p>
-    </section>
-
-    <section>
-      <h2>Nasze usługi</h2>
-      <ul>
-        <li>Naprawa urządzeń rehabilitacyjnych</li>
-        <li>Diagnostyka i kalibracja urządzeń</li>
-        <li>Konserwacja cykliczna aparatury</li>
-        <li>Wsparcie techniczne</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Kontakt</h2>
-      <p>📧 Email: <a href="mailto:medicotechserwis@gmail.com">medicotechserwis@gmail.com</a></p>
-      <p>📞 Telefon: <a href="tel:+48798852707">798 852 707</a></p>
-      <p>📍 Obsługujemy całą Polskę</p>
-    </section>
-  </main>
+  <section class="content">
+    <h2>Kontakt</h2>
+    <form action="https://formspree.io/f/meokkzze" method="POST">
+      <label>
+        Imię i nazwisko:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Adres e-mail:
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Wiadomość:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 MedicoTech Serwis | Wszystkie prawa zastrzeżone</p>
+    <p>&copy; 2025 MedicoTech Serwis</p>
   </footer>
 </body>
 </html>
