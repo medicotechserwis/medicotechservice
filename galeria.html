@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - MedicoTech Serwis</title>
-
-    <!-- Swiper CSS z CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Twój plik stylów -->
-    <link rel="stylesheet" href="style.css">
-
+    <title>Galeria – MedicoTech Serwis</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background: #f5f5f5;
+        }
+
+        header {
+            background: #0c3c60;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
         }
 
         h1 {
             text-align: center;
             margin: 20px 0;
-            color: #004080;
+            color: #0c3c60;
         }
 
-        /* Swiper stylizacja */
+        /* Swiper container */
         .swiper {
             width: 90%;
-            max-width: 1000px;
-            height: 600px;
+            max-width: 900px;
+            height: 500px;
             margin: auto;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            background: #fff;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
         }
 
         .swiper-slide img {
@@ -42,57 +51,60 @@
             object-fit: cover;
         }
 
-        /* Kolor strzałek i kropek */
+        /* Navigation arrows */
         .swiper-button-next,
         .swiper-button-prev {
-            color: #004080;
+            color: white;
         }
 
+        /* Pagination dots */
         .swiper-pagination-bullet {
-            background: #004080;
-            opacity: 0.7;
+            background: white;
+            opacity: 0.8;
         }
-
         .swiper-pagination-bullet-active {
-            background: #ff6600;
-            opacity: 1;
+            background: #0c3c60;
         }
     </style>
 </head>
 <body>
 
-    <h1>Galeria realizacji</h1>
+    <header>
+        <a href="index.html">← Powrót do strony głównej</a>
+    </header>
 
-    <!-- Kontener Swiper -->
-    <div class="swiper mySwiper">
+    <h1>Galeria</h1>
+
+    <!-- Slider main container -->
+    <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/1.jpg" alt="Zdjęcie 1"></div>
-            <div class="swiper-slide"><img src="img/2.jpg" alt="Zdjęcie 2"></div>
-            <div class="swiper-slide"><img src="img/3.jpg" alt="Zdjęcie 3"></div>
-            <div class="swiper-slide"><img src="img/4.jpg" alt="Zdjęcie 4"></div>
-            <div class="swiper-slide"><img src="img/5.jpg" alt="Zdjęcie 5"></div>
-            <div class="swiper-slide"><img src="img/6.jpg" alt="Zdjęcie 6"></div>
-            <div class="swiper-slide"><img src="img/7.jpg" alt="Zdjęcie 7"></div>
-            <div class="swiper-slide"><img src="img/8.jpg" alt="Zdjęcie 8"></div>
+            <div class="swiper-slide"><img src="img/im1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im7.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/im8.jpg" alt=""></div>
         </div>
 
-        <!-- Strzałki -->
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Navigation buttons -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
-        <!-- Kropki -->
-        <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Swiper JS z CDN -->
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Inicjalizacja Swipera -->
+    <!-- Init Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".swiper", {
             loop: true,
             autoplay: {
-                delay: 5000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             pagination: {
