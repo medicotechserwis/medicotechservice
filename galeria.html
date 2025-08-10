@@ -3,117 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria – MedicoTech Serwis</title>
-    
-    <!-- Swiper CSS -->
+    <title>Galeria - MedicoTech Serwis</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
         }
-
-        header {
-            background: #0c3c60;
-            padding: 15px;
-            text-align: center;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
         h1 {
             text-align: center;
-            margin: 20px 0;
             color: #0c3c60;
+            margin: 20px 0;
         }
-
-        /* Swiper container */
         .swiper {
             width: 90%;
-            max-width: 900px;
-            height: 500px;
+            max-width: 800px;
             margin: auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
         }
-
         .swiper-slide img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Navigation arrows */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: white;
-        }
-
-        /* Pagination dots */
-        .swiper-pagination-bullet {
-            background: white;
-            opacity: 0.8;
-        }
-        .swiper-pagination-bullet-active {
-            background: #0c3c60;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="index.html">← Powrót do strony głównej</a>
-    </header>
+    <h1>Galeria naszych realizacji</h1>
 
-    <h1>Galeria</h1>
-
-    <!-- Slider main container -->
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img6.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img7.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="img8.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/img1.jpg" alt="Zdjęcie 1"></div>
+            <div class="swiper-slide"><img src="img/img2.jpg" alt="Zdjęcie 2"></div>
+            <div class="swiper-slide"><img src="img/img3.jpg" alt="Zdjęcie 3"></div>
+            <div class="swiper-slide"><img src="img/img4.jpg" alt="Zdjęcie 4"></div>
+            <div class="swiper-slide"><img src="img/img5.jpg" alt="Zdjęcie 5"></div>
+            <div class="swiper-slide"><img src="img/img6.jpg" alt="Zdjęcie 6"></div>
+            <div class="swiper-slide"><img src="img/img7.jpg" alt="Zdjęcie 7"></div>
+            <div class="swiper-slide"><img src="img/img8.jpg" alt="Zdjęcie 8"></div>
         </div>
-
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- Navigation buttons -->
+        <!-- Dodaj przyciski nawigacji -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Init Swiper -->
     <script>
-        var swiper = new Swiper(".swiper", {
+        const swiper = new Swiper('.swiper', {
             loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
             pagination: {
-                el: ".swiper-pagination",
+                el: '.swiper-pagination',
                 clickable: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
